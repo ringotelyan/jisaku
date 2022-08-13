@@ -23,3 +23,4 @@ Things you may want to cover:
 
 * ...
 * デントリペア
+* データ定義・アプリケーション詳細設計
