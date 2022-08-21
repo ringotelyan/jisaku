@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :admins, controllers: {
     registrations: "admin/sessions"
   }
@@ -7,5 +8,9 @@ Rails.application.routes.draw do
     registrationsions: "public/registrations",
     sessions: 'public/sessions'
   }
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  namespace :public do
+    get '/' => "homes#top"
+    get '/about' => 'homes#about'
+  end
 end
